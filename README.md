@@ -17,6 +17,8 @@
 
 ---
 
+![DeepTrace dashboard preview](assets/dashboard-preview.svg)
+
 ![DeepTrace content-integrity workbench](assets/deeptrace-overview.svg)
 
 ## Overview
