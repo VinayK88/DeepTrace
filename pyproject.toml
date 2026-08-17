@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "deeptrace"
+version = "0.1.0"
+description = "Content authenticity, provenance and influence-analysis workbench"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.29"]
+
+[project.scripts]
+deeptrace = "deeptrace.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["deeptrace*"]
