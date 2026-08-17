@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "items": 8,
+    "expected_verdicts_matched": 8,
+    "risky_media_flagged": 4,
+    "risky_media_total": 4,
+    "campaigns_detected": 2,
+    "verdict_counts": {
+      "VERIFIED": 2,
+      "LIKELY_MANIPULATED": 2,
+      "HIGH_RISK_SYNTHETIC": 2,
+      "LIKELY_AUTHENTIC": 1,
+      "INCONCLUSIVE": 1
+    }
+  },
+  "assessments": [
+    {"content_id":"m01","verdict":"VERIFIED","confidence":0.96,"risk_score":0,"evidence":["valid provenance credential from trusted synthetic signer","metadata is internally consistent","strong similarity to a known-source asset"],"cautions":[]},
+    {"content_id":"m02","verdict":"VERIFIED","confidence":0.96,"risk_score":0,"evidence":["valid provenance credential from trusted synthetic signer","metadata is internally consistent","strong similarity to a known-source asset"],"cautions":[]},
+    {"content_id":"m03","verdict":"LIKELY_MANIPULATED","confidence":0.885,"risk_score":61,"evidence":["strong similarity to a known-source asset","high manipulation signal in fixture"],"cautions":["no verifiable provenance credential in fixture","metadata consistency check failed"]},
+    {"content_id":"m04","verdict":"LIKELY_MANIPULATED","confidence":0.895,"risk_score":65,"evidence":["strong similarity to a known-source asset","high manipulation signal in fixture"],"cautions":["no verifiable provenance credential in fixture","metadata consistency check failed"]},
+    {"content_id":"m05","verdict":"HIGH_RISK_SYNTHETIC","confidence":0.932,"risk_score":57,"evidence":["metadata is internally consistent","high synthetic-media signal in fixture"],"cautions":["no verifiable provenance credential in fixture","weak similarity to known-source assets"]},
+    {"content_id":"m06","verdict":"HIGH_RISK_SYNTHETIC","confidence":0.92,"risk_score":62,"evidence":["metadata is internally consistent","high synthetic-media signal in fixture"],"cautions":["no verifiable provenance credential in fixture","weak similarity to known-source assets"]},
+    {"content_id":"m07","verdict":"LIKELY_AUTHENTIC","confidence":0.728,"risk_score":5,"evidence":["metadata is internally consistent","moderate similarity to a known-source asset"],"cautions":["no verifiable provenance credential in fixture"]},
+    {"content_id":"m08","verdict":"INCONCLUSIVE","confidence":0.58,"risk_score":57,"evidence":["no single signal dominated the assessment"],"cautions":["no verifiable provenance credential in fixture","metadata consistency check failed"]}
+  ],
+  "campaigns": [
+    {"campaign_id":"camp-01","narrative":"bridge collapse caused by secret attack","accounts":["acct-x1","acct-x2"],"domains":["mirror-a.example","mirror-b.example"],"content_ids":["m03","m04"],"time_span_minutes":4,"coordination_score":0.85},
+    {"campaign_id":"camp-02","narrative":"official admits secret attack","accounts":["acct-x3","acct-x4"],"domains":["mirror-a.example","mirror-c.example"],"content_ids":["m05","m06"],"time_span_minutes":3,"coordination_score":0.85}
+  ]
+}
