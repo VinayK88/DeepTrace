@@ -380,7 +380,11 @@ The dashboard surfaces:
 - narrative clusters;
 - evidence used in each assessment.
 
-### Assessment API example
+### Input → output example
+
+The `/assess` endpoint accepts one normalized multimodal evidence envelope and returns an explainable content-integrity assessment.
+
+**Input — proposed media evidence**
 
 ```json
 {
@@ -402,7 +406,45 @@ The dashboard surfaces:
 }
 ```
 
-The API returns a verdict, confidence, risk score, supporting evidence, and cautions.
+**Output — DeepTrace assessment**
+
+```json
+{
+  "content_id": "sample-001",
+  "verdict": "VERIFIED",
+  "confidence": 0.96,
+  "risk_score": 0,
+  "evidence": [
+    "valid provenance credential from trusted synthetic signer",
+    "metadata is internally consistent",
+    "strong similarity to a known-source asset"
+  ],
+  "cautions": []
+}
+```
+
+Request flow:
+
+```text
+image / video / audio evidence
+            │
+            ▼
+      POST /assess
+            │
+            ▼
+   provenance + metadata
+   + forensic signals
+   + source similarity
+            │
+            ▼
+      evidence fusion
+            │
+            ▼
+VERDICT + CONFIDENCE + RISK
+      + EVIDENCE + CAUTIONS
+```
+
+A suspicious item follows the same contract. For example, missing provenance plus metadata inconsistency, strong known-source similarity, and a high manipulation signal can produce `LIKELY_MANIPULATED` with the supporting and cautionary evidence kept separate for reviewer inspection.
 
 ---
 
