@@ -3,6 +3,7 @@ from __future__ import annotations
 from collections import Counter
 
 from .engine import DeepTraceEngine
+from .evaluation import evaluation_summary
 from .fixtures import ITEMS
 from .ml import cluster_campaigns, ml_summary
 
@@ -32,6 +33,7 @@ def build_report() -> dict:
             "verdict_counts": dict(counts),
         },
         "ml": ml_summary(ITEMS),
+        "model_monitoring_and_robustness": evaluation_summary(ITEMS),
         "assessments": [a.to_dict() for a in assessments],
         "campaigns": [c.to_dict() for c in campaigns],
         "ml_campaigns": [c.to_dict() for c in ml_campaigns],
