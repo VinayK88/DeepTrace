@@ -4,12 +4,14 @@ from collections import Counter
 
 from .engine import DeepTraceEngine
 from .fixtures import ITEMS
+from .ml import cluster_campaigns, ml_summary
 
 
 def build_report() -> dict:
     engine = DeepTraceEngine()
     assessments = [engine.assess(item) for item in ITEMS]
     campaigns = engine.detect_campaigns(ITEMS)
+    ml_campaigns = cluster_campaigns(ITEMS)
     matches = sum(a.verdict == item.expected_verdict for a, item in zip(assessments, ITEMS))
     counts = Counter(a.verdict for a in assessments)
 
@@ -26,8 +28,11 @@ def build_report() -> dict:
             "risky_media_flagged": risky_caught,
             "risky_media_total": len(risky_ids),
             "campaigns_detected": len(campaigns),
+            "ml_campaign_clusters": len(ml_campaigns),
             "verdict_counts": dict(counts),
         },
+        "ml": ml_summary(ITEMS),
         "assessments": [a.to_dict() for a in assessments],
         "campaigns": [c.to_dict() for c in campaigns],
+        "ml_campaigns": [c.to_dict() for c in ml_campaigns],
     }
