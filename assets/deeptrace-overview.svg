@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" rx="28" fill="#07111f"/>
+  <rect x="34" y="34" width="1132" height="562" rx="22" fill="#0d1728" stroke="#223553"/>
+  <text x="72" y="92" fill="#f8fafc" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">DeepTrace Content Integrity Workbench</text>
+  <text x="72" y="126" fill="#94a3b8" font-family="Arial" font-size="17">Provenance • Media evidence • Narrative recurrence • Campaign coordination</text>
+  <rect x="72" y="164" width="250" height="96" rx="16" fill="#101d31" stroke="#2b415e"/>
+  <text x="94" y="197" fill="#94a3b8" font-family="Arial" font-size="14">SYNTHETIC MEDIA</text><text x="94" y="239" fill="#f8fafc" font-family="Arial" font-size="36" font-weight="700">8</text>
+  <rect x="338" y="164" width="250" height="96" rx="16" fill="#101d31" stroke="#2b415e"/>
+  <text x="360" y="197" fill="#94a3b8" font-family="Arial" font-size="14">VERDICT MATCH</text><text x="360" y="239" fill="#67e8f9" font-family="Arial" font-size="36" font-weight="700">8 / 8</text>
+  <rect x="604" y="164" width="250" height="96" rx="16" fill="#101d31" stroke="#2b415e"/>
+  <text x="626" y="197" fill="#94a3b8" font-family="Arial" font-size="14">RISKY MEDIA FLAGGED</text><text x="626" y="239" fill="#fb7185" font-family="Arial" font-size="36" font-weight="700">4 / 4</text>
+  <rect x="870" y="164" width="250" height="96" rx="16" fill="#101d31" stroke="#2b415e"/>
+  <text x="892" y="197" fill="#94a3b8" font-family="Arial" font-size="14">CAMPAIGN CLUSTERS</text><text x="892" y="239" fill="#fbbf24" font-family="Arial" font-size="36" font-weight="700">2</text>
+  <text x="72" y="315" fill="#e2e8f0" font-family="Arial" font-size="19" font-weight="700">Evidence fusion</text>
+  <rect x="72" y="338" width="1048" height="104" rx="16" fill="#0a1424" stroke="#2b415e"/>
+  <text x="98" y="374" fill="#7dd3fc" font-family="Arial" font-size="16" font-weight="700">PROVENANCE</text><text x="98" y="404" fill="#cbd5e1" font-family="Arial" font-size="15">credential • signer • source history</text>
+  <text x="374" y="374" fill="#7dd3fc" font-family="Arial" font-size="16" font-weight="700">FORENSICS</text><text x="374" y="404" fill="#cbd5e1" font-family="Arial" font-size="15">metadata • similarity • manipulation</text>
+  <text x="650" y="374" fill="#7dd3fc" font-family="Arial" font-size="16" font-weight="700">NARRATIVE</text><text x="650" y="404" fill="#cbd5e1" font-family="Arial" font-size="15">semantic recurrence • source spread</text>
+  <text x="914" y="374" fill="#7dd3fc" font-family="Arial" font-size="16" font-weight="700">CAMPAIGN</text><text x="914" y="404" fill="#cbd5e1" font-family="Arial" font-size="15">accounts • domains • timing</text>
+  <text x="72" y="492" fill="#e2e8f0" font-family="Arial" font-size="19" font-weight="700">Auditable output</text>
+  <text x="72" y="532" fill="#cbd5e1" font-family="Arial" font-size="16">VERIFIED  →  LIKELY AUTHENTIC  →  INCONCLUSIVE  →  LIKELY MANIPULATED  →  HIGH-RISK SYNTHETIC</text>
+  <text x="72" y="570" fill="#64748b" font-family="Arial" font-size="14">Deterministic synthetic evaluation • No real-person attribution • No real campaign claims</text>
+</svg>
