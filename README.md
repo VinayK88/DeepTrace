@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/apple-hero.svg" alt="DeepTrace — content integrity, provenance, and campaign intelligence" width="100%" />
+</p>
+
 <div align="center">
 
 # DeepTrace
